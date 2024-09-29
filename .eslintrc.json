@@ -33,11 +33,15 @@
   },
   "settings": {
     "react": {
-      "version": "detect"
+      "version": "detect",
+      "jsxRuntime": "automatic"
     }
   },
+  "globals": {
+    "React": "writable"
+  },
   "rules": {
-    "no-console": "warn",
+    "no-console": "error",
     "react/prop-types": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
@@ -45,10 +49,9 @@
     "jsx-a11y/click-events-have-key-events": "warn",
     "jsx-a11y/interactive-supports-focus": "warn",
     "prettier/prettier": "warn",
-    "no-unused-vars": "off",
     "unused-imports/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
-    "object-curly-spacing": ["error", "never"],
+    "object-curly-spacing": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
