@@ -1,5 +1,7 @@
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
+  - core-js-pure
+  - esbuild
   - git-commit-msg-linter
   - sharp
   - unrs-resolver
