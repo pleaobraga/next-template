@@ -1,4 +1,5 @@
 onlyBuiltDependencies:
   - '@tailwindcss/oxide'
+  - git-commit-msg-linter
   - sharp
   - unrs-resolver
