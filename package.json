@@ -24,6 +24,7 @@
   "devDependencies": {
     "@chromatic-com/storybook": "^4.1.0",
     "@eslint/eslintrc": "^3",
+    "@next/eslint-plugin-next": "^15.4.6",
     "@storybook/addon-a11y": "^9.1.1",
     "@storybook/addon-docs": "^9.1.1",
     "@storybook/addon-onboarding": "^9.1.1",
@@ -42,6 +43,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.4.5",
     "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-storybook": "^9.1.1",
     "git-commit-msg-linter": "^5.0.8",
     "husky": "^9.1.7",

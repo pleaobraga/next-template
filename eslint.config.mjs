@@ -1,4 +1,3 @@
-// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
 import storybook from "eslint-plugin-storybook";
 
 import { FlatCompat } from '@eslint/eslintrc';
@@ -17,8 +16,33 @@ const eslintConfig = [
   ...storybook.configs["flat/recommended"],
 
   {
+    files: ['**/*.{ts,tsx,js,jsx}'],
     rules: {
+      // Console handling
       'no-console': ['warn', { allow: ['warn', 'error'] }],
+      'no-debugger': 'error',
+
+      // Imports hygiene
+      'import/first': 'error',
+      'import/no-duplicates': 'error',
+      'import/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', ['parent', 'sibling', 'index'], 'type'],
+          alphabetize: { order: 'asc', caseInsensitive: true },
+          'newlines-between': 'always',
+        },
+      ],
+
+      // TypeScript hygiene
+      '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+      '@typescript-eslint/no-unused-vars': [
+        'warn',
+        { vars: 'all', args: 'after-used', ignoreRestSiblings: true },
+      ],
+
+      // React best practices
+      'react/jsx-no-useless-fragment': 'warn',
     },
   },
 ]
